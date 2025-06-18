@@ -11,7 +11,7 @@ export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.list}>
-        <FlashList 
+        <FlashList
           renderItem={({ item }) => <SwipeableActivity activity={item} />}
           data={activities}
           estimatedItemSize={50}
@@ -32,6 +32,7 @@ export default function Index() {
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: "#FEF9E6",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",

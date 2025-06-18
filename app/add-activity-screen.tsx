@@ -8,8 +8,9 @@ export default function AddActivityScreen() {
     const {insertActivity} = useActivitiesContext();
     return (
         <View style={styles.container}>
-            <Text>AddActivityScreen</Text>
+            <Text style={styles.title}>Add Activity</Text>
             <TextInput
+                style={styles.input}
                 placeholder="Enter steps"
                 placeholderTextColor="black"
                 keyboardType="number-pad"
@@ -33,22 +34,36 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#FEF9E6"
     },
     addbutton: {
         backgroundColor: "#1ED2AF",
         padding: 16,
         width: "100%",
         textAlign: "center",
-        marginBottom: 16
-  },
+    },
     button: {
         backgroundColor: "#D00414",
         padding: 16,
         width: "100%",
         textAlign: "center",
-  },
-  buttonText: {
-    color: "white",
-    textAlign: "center"
-  },
+    },
+    buttonText: {
+        color: "white",
+        textAlign: "center"
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: "bold",
+        marginBottom: 16,
+        },
+    input: {
+        borderWidth: 2,
+        borderColor: "black",
+        width: "100%",
+        padding: 12,
+        fontSize: 16,
+        marginBottom: 24,
+        backgroundColor: "white",
+        },
 });

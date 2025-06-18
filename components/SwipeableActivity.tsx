@@ -30,10 +30,19 @@ export const Action = ({ text }: { text: string }) => {
 
 const styles = StyleSheet.create({
     view: {
-
+        borderWidth: 2,
+        borderColor: "black",
+        padding: 16,
+        marginHorizontal: 16,
+        marginVertical: 8,
+        backgroundColor: "white",
     },
     actionView: {
-
+        backgroundColor: "#D00414",
+        justifyContent: "center",
+        alignItems: "center",
+        width: 80,
+        padding: 10,
     },
     actionText: {
 
