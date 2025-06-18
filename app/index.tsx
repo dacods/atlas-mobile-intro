@@ -4,14 +4,15 @@ import { Link, router } from "expo-router";
 import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 import { FlashList } from "@shopify/flash-list"
 import Activity from "@/components/Activity";
+import SwipeableActivity from "@/components/SwipeableActivity";
 
 export default function Index() {
-  const {activities} = useActivitiesContext();
+  const {activities, deleteAllActivities} = useActivitiesContext();
   return (
     <View style={styles.container}>
       <View style={styles.list}>
         <FlashList 
-          renderItem={({ item }) => <Activity activity={item} />}
+          renderItem={({ item }) => <SwipeableActivity activity={item} />}
           data={activities}
           estimatedItemSize={50}
         />
@@ -19,6 +20,12 @@ export default function Index() {
       <Link style={styles.button} href={"/add-activity-screen"} replace>
         <Text style={styles.buttonText}>Add activity</Text>
       </Link>
+      <Pressable
+          style={[styles.deleteButton]}
+          onPress={deleteAllActivities}
+        >
+          <Text style={styles.buttonText}>Delete All Activities</Text>
+        </Pressable>
     </View>
   );
 }
@@ -43,7 +50,14 @@ const styles = StyleSheet.create({
     width: "100%",
     textAlign: "center",
   },
+  deleteButton: {
+    backgroundColor: "#D00414",
+    padding: 16,
+    width: "100%",
+    textAlign: "center",
+  },
   buttonText: {
-    color: "white"
+    color: "white",
+    textAlign: "center"
   },
 });

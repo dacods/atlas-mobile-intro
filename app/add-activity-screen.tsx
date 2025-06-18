@@ -35,17 +35,17 @@ const styles = StyleSheet.create({
         alignItems: "center",
     },
     addbutton: {
-    backgroundColor: "#1ED2AF",
-    padding: 16,
-    width: "100%",
-    textAlign: "center",
-    marginBottom: 16
+        backgroundColor: "#1ED2AF",
+        padding: 16,
+        width: "100%",
+        textAlign: "center",
+        marginBottom: 16
   },
     button: {
-    backgroundColor: "#D00414",
-    padding: 16,
-    width: "100%",
-    textAlign: "center",
+        backgroundColor: "#D00414",
+        padding: 16,
+        width: "100%",
+        textAlign: "center",
   },
   buttonText: {
     color: "white",
