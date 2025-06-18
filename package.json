@@ -41,7 +41,8 @@
     "react-native-webview": "13.13.5",
     "expo-sqlite": "~15.2.12",
     "expo-file-system": "~18.1.10",
-    "expo-asset": "~11.1.5"
+    "expo-asset": "~11.1.5",
+    "@shopify/flash-list": "1.7.6"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
